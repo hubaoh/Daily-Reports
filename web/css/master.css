@@ -1,0 +1,53 @@
+.relative{
+  position: relative;
+}
+.add-user-name-certfc{
+  margin:2% 0 8px 7%;
+}
+.add_user_upload{
+  height:180px;
+  width:300px;
+  line-height: 110px;
+  background:#fff;
+  border:1px solid #eee;
+  padding-left:0!important;
+}
+.add_user_upload_goods{
+  height:180px;
+  line-height: 110px;
+  background:#fff;
+  border:1px solid #eee;
+  padding-left:0!important;
+}
+.add_user_upload input{
+  display: none;
+}
+.add_user_upload span{
+  font-size:30px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.add_user_upload span:hover{
+  font-size:35px;
+  vertical-align: middle;
+}
+.add_user_upload img{
+  cursor:pointer;
+}
+#preview{
+}
+#addUserPlateNumber{
+  width:100%;
+}
+#addUserPlateNumber option{
+  padding:15px;
+}
+.progress-self{
+  width:100%;
+  margin:0;
+  background-color:transparent!important;
+  height:5px;
+  position:absolute;
+  bottom:-15px;
+  left:0;
+}

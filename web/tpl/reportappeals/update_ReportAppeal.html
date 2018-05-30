@@ -1,0 +1,48 @@
+<div class="modal-header">
+    <h3 class="modal-title">申诉处理</h3>
+</div>
+<div class="modal-body">
+    <form name="form" class="form-validation" novalidate>
+
+        <div class="form-group row">
+            <label class="col-sm-3 control-label text-right">申诉理由:</label>
+            <div class="col-sm-8">
+                <textarea class="form-control" name="report_todayWork" rows="2" cols="8" ng-model="reportAppealDto.appealReason" ng-disabled="true" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 control-label text-right">工作记录评分:</label>
+            <div class="col-sm-8">
+                <input type="text" placeholder="请输入分数" class="form-control" name="report_workScore"
+                       ng-model="reportAppealDto.report_workScore">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 control-label text-right">明日计划评分:</label>
+            <div class="col-sm-8">
+                <input type="text" placeholder="请输入分数" class="form-control" name="report_planScore"
+                       ng-model="reportAppealDto.report_planScore">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 control-label text-right">申诉意见:</label>
+            <div class="col-sm-8">
+                <textarea class="form-control" name="handleView" rows="2" cols="8" ng-model="reportAppealDto.handleView"  required/>
+                <p>
+                    <span style="color: red" ng-show="form.handleView.$invalid">
+                        <span ng-show="form.handleView.$error.required">*申诉意见不能为空</span>
+                    </span>
+                </p>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+<div class="modal-footer ng-scope">
+    <button class="btn btn-default" ng-click="close()">取消</button>
+    <button class="btn btn-primary" type="submit" ng-click="submit()" ng-disabled='form.$invalid'>提交</button>
+</div>

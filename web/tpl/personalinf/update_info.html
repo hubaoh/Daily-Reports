@@ -1,0 +1,72 @@
+<div class="modal-header">
+    <h3 class="modal-title">完善个人信息</h3>
+</div>
+<div class="modal-body">
+    <form name="form" class="form-validation" novalidate>
+
+        <div class="form-group row">
+            <label class="col-sm-3 control-label text-right">手机号码:</label>
+            <div class="col-sm-8">
+                <input type="text" placeholder="请输入手机号码" class="form-control" name="phoneNumber" ng-model="user.phoneNumber" required>
+                <p>
+                    <span style="color: red" ng-show="form.phoneNumber.$invalid">
+                        <span ng-show="form.phoneNumber.$error.required">*手机号码不能为空</span>
+                    </span>
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 control-label text-right">身份证后六位:</label>
+            <div class="col-sm-8">
+                <input type="text" placeholder="请输入身份证后六位" class="form-control" name="idCard" ng-model="user.idCard" required>
+                <p>
+                    <span style="color: red" ng-show="form.idCard.$invalid">
+                        <span ng-show="form.idCard.$error.required">*身份证后六位不能为空</span>
+                    </span>
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 control-label text-right">最喜欢的数字:</label>
+            <div class="col-sm-8">
+                <input type="text" placeholder="请输入最喜欢的数字" class="form-control" name="likeNumber" ng-model="user.likeNumber" required>
+                <p>
+                    <span style="color: red" ng-show="form.likeNumber.$invalid">
+                        <span ng-show="form.likeNumber.$error.required">*最喜欢的数字不能为空</span>
+                    </span>
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 control-label text-right">地址:</label>
+            <div class="col-sm-8">
+                <input type="text" placeholder="请输入地址" class="form-control" name="address" ng-model="user.address">
+            </div>
+        </div>
+
+
+
+        <div class="form-group row">
+            <label class="col-sm-3 control-label text-right">QQ:</label>
+            <div class="col-sm-8">
+                <input type="text" placeholder="请输入QQ号" class="form-control" name="qq" ng-model="user.qq">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 control-label text-right">爱好:</label>
+            <div class="col-sm-8">
+                <input type="text" placeholder="请输入爱好" class="form-control" name="hobby" ng-model="user.hobby">
+            </div>
+        </div>
+
+    </form>
+</div>
+
+<div class="modal-footer ng-scope">
+    <button class="btn btn-default" ng-click="close()">取消</button>
+    <button class="btn btn-primary" type="submit" ng-click="submit()" ng-disabled='form.$invalid'>提交</button>
+</div>

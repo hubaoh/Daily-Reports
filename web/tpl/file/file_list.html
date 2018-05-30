@@ -1,0 +1,45 @@
+<ul class="breadcrumb bg-white wrapper-sm m-b-none">
+    <li><a href><i class="fa fa-home"></i> 主页</a></li>
+    <li><a href>系统设置</a></li>
+    <li class="active">文档管理</li>
+</ul>
+
+<div class="" ng-controller="fileController">
+
+    <div class="wrapper-sm">
+        <div class="panel panel-default">
+            <div>
+                <toaster-container
+                        toaster-options="{'position-class': 'toast-top-right', 'close-button':true}"></toaster-container>
+            </div>
+            <div class="wrapper-sm">
+                <div class="row">
+                    <div class="col-lg-12">
+
+
+                        <input type="text" class="form-control w-sm pull-left m-r-xs" name="report_time"
+                               datepicker-popup="{{format}}" placeholder="输入时间查询" ng-model="uploadTime"
+                               is-open="createTimeOpened" datepicker-options="dateOptions" min-date="tomorrow"
+                               close-text="关闭"/>
+                        <button type="button" class="btn btn-default pull-left m-r-xs"
+                                ng-click="createTimeTool($event)"><i
+                                class="glyphicon glyphicon-calendar"></i></button>
+
+                        <input ng-model="uploader" class="form-control w-sm pull-left m-r-xs rounded" placeholder="输入员工名称查询"/>
+                        <button class="btn m-b-xs btn-default btn-rounded pull-left m-r" ng-click="search()">查询</i></button>
+
+                        <!--<input ng-model="employeeNumber" class="form-control w-sm pull-left m-r-xs rounded" placeholder="输入员工姓名查询"/>-->
+                        <button class="btn m-b-xs btn-primary btn-addon pull-right m-r" ng-click="upload()"><i class="glyphicon glyphicon-cloud-upload"></i>上传</button>
+                        <!--<button class="btn m-b-xs btn-primary btn-addon pull-right m-r" ng-click="createUser()"><i class="fa fa-user"></i>创建员工</button>-->
+
+                    </div>
+                </div>
+                <div class="b-t">
+                    <div class="table-responsive">
+                        <div ng-grid="gridOptions" style="min-height:500px"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

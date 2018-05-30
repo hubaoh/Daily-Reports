@@ -1,0 +1,101 @@
+<ul class="breadcrumb bg-white wrapper-sm m-b-none">
+    <li><a href><i class="fa fa-home"></i> 主页</a></li>
+    <li><a href>系统设置</a></li>
+    <li class="active">个人设置</li>
+</ul>
+<div class="" ng-controller="personalInfoController">
+    <div class="row">
+        <div class="col-lg-12">
+            <button class="btn m-b-xs btn-success btn-addon pull-right m-r" ng-click="updateInfo()">完善信息</button>
+            <button class="btn m-b-xs btn-primary btn-addon pull-right m-r" ng-click="updatePassWord()">修改密码</button>
+
+        </div>
+    </div>
+        <h3 style="text-align: center;">基本信息</h3>
+        <form name="form" class="form-validation" novalidate>
+
+            <div>
+            <toaster-container toaster-options="{'position-class': 'toast-top-right', 'close-button':true}"></toaster-container>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 control-label text-right">姓名:</label>
+                <div class="col-sm-8">
+                    <input type="text" placeholder="" class="form-control" name="userName" ng-model="user.userName">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 control-label text-right">员工编号:</label>
+                <div class="col-sm-8">
+                    <input type="text" placeholder="" class="form-control" name="employeeNumber" ng-model="user.employeeNumber">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 control-label text-right">所属部门:</label>
+                <div class="col-sm-8">
+                    <input type="text" placeholder="" class="form-control" name="deptName" ng-model="user.deptName">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 control-label text-right">用户权限:</label>
+                <div class="col-sm-8">
+                    <input type="text" placeholder="" class="form-control" name="roleValue" ng-model="user.roleValue">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 control-label text-right">手机号码:</label>
+                <div class="col-sm-8">
+                    <input type="text" placeholder="" class="form-control" name="phoneNumber" ng-model="user.phoneNumber">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 control-label text-right">身份证后六位:</label>
+                <div class="col-sm-8">
+                    <input type="text" placeholder="" class="form-control" name="idCard" ng-model="user.idCard">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 control-label text-right">最喜欢的数字:</label>
+                <div class="col-sm-8">
+                    <input type="text" placeholder="" class="form-control" name="likeNumber" ng-model="user.likeNumber">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 control-label text-right">性别:</label>
+                <div class="col-sm-8">
+                    <input type="text" placeholder="" class="form-control" name="gender" ng-model="user.gender">
+                </div>
+            </div>
+
+
+            <div class="form-group row">
+                <label class="col-sm-3 control-label text-right">地址:</label>
+                <div class="col-sm-8">
+                    <input type="text" placeholder="" class="form-control" name="address" ng-model="user.address">
+                </div>
+            </div>
+
+
+
+            <div class="form-group row">
+                <label class="col-sm-3 control-label text-right">QQ:</label>
+                <div class="col-sm-8">
+                    <input type="text" placeholder="" class="form-control" name="qq" ng-model="user.qq">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 control-label text-right">爱好:</label>
+                <div class="col-sm-8">
+                    <input type="text" placeholder="" class="form-control" name="hobby" ng-model="user.hobby">
+                </div>
+            </div>
+        </form>
+</div>

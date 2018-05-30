@@ -1,0 +1,42 @@
+<component name="libraryTable">
+  <library name="ssm">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/libs/ssm-jarlibs/aopalliance-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/libs/ssm-jarlibs/asm-4.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/libs/ssm-jarlibs/aspectjweaver-1.8.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/libs/ssm-jarlibs/c3p0-0.9.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/libs/ssm-jarlibs/cglib-3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/libs/ssm-jarlibs/commons-beanutils-1.8.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/libs/ssm-jarlibs/commons-collections.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/libs/ssm-jarlibs/commons-lang.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/libs/ssm-jarlibs/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/libs/ssm-jarlibs/ezmorph-1.0.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/libs/ssm-jarlibs/jackson-annotations-2.5.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/libs/ssm-jarlibs/jackson-core-2.5.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/libs/ssm-jarlibs/jackson-databind-2.5.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/libs/ssm-jarlibs/json-lib-2.2.2-jdk15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/libs/ssm-jarlibs/jstl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/libs/ssm-jarlibs/log4j-1.2.17.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/libs/ssm-jarlibs/log4j-api-2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/libs/ssm-jarlibs/log4j-core-2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/libs/ssm-jarlibs/mybatis-3.3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/libs/ssm-jarlibs/mybatis-spring-1.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/libs/ssm-jarlibs/mysql-connector-java-5.1.26-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/libs/ssm-jarlibs/slf4j-api-1.7.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/libs/ssm-jarlibs/slf4j-log4j12-1.7.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/libs/ssm-jarlibs/spring-aop-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/libs/ssm-jarlibs/spring-aspects-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/libs/ssm-jarlibs/spring-beans-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/libs/ssm-jarlibs/spring-context-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/libs/ssm-jarlibs/spring-core-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/libs/ssm-jarlibs/spring-expression-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/libs/ssm-jarlibs/spring-jdbc-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/libs/ssm-jarlibs/spring-tx-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/libs/ssm-jarlibs/spring-web-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/libs/ssm-jarlibs/spring-webmvc-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/libs/ssm-jarlibs/standard-1.1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

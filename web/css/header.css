@@ -1,0 +1,29 @@
+/*body {*/
+    /*!*background-color: rgba(65,128,227,0.5);*!*/
+    /*background-color: rgb(32, 160, 255);*/
+    /*!*border: 0;*!*/
+/*}*/
+
+.name {
+    text-align: left;
+    color: white;
+    font-size: 25px;
+    font-family: 隶书;
+    margin-left: 3%;
+    margin-top: 20px;
+   /*  border-left: 10px solid black ;
+    border-top: 2px solid black;
+    border-bottom: 5px solid black;
+    border-right: 4px solid black; */
+    width: 300px;
+}
+
+img{
+	width:40px;
+	height:40px;
+}
+
+.info  a {
+	text-decoration:none;
+	
+}

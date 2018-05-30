@@ -1,0 +1,26 @@
+
+<!-- 左右2个图表样式-->
+<div class="childPage-Echarts panel-body relative" ng-controller="reportSummaryController">
+    <ul class="breadcrumb bg-white wrapper-sm m-b-none" style="background: #242d36;color: white;">
+        <li><a href><i class="fa fa-home"></i> 主页</a></li>
+        <li><a href>日报考评</a></li>
+        <li class="active">考评统计</li>
+    </ul>
+
+    <div class="childPage-Echarts-c wrap88 relative" style="width:96%;">
+
+        <div class="fl childPage-Echarts-l animated bounceInLeft" style="width:50%;height:540px;">
+            <h1 style="position: relative;left:50px;text-align: center;">日报状态统计</h1>
+            <div style="height:492px;position:relative;">
+                <div class="panel-body" id="personalTotalScoreChart" style="height:450px;"></div>
+            </div>
+        </div>
+
+        <div class="fr childPage-Echarts-r animated bounceInRight" style="width:50%;height:540px;">
+            <h1>日报考评分数统计</h1>
+            <div style="height:492px;position: relative;">
+                <div class="panel-body" id="personalReportChart" style="height:450px;"></div>
+            </div>
+        </div>
+    </div>
+</div>

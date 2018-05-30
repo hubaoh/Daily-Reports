@@ -1,0 +1,43 @@
+<div class="modal-header">
+    <h3 class="modal-title">考评详情</h3>
+</div>
+<div class="modal-body">
+    <div name="form" class="form-validation" novalidate>
+
+        <div class="form-group row">
+            <label class="col-sm-3 control-label text-right">今日工作记录:</label>
+            <div class="col-sm-8">
+                <input type="text" placeholder="请输入考评分数" class="form-control" name="report_workScore"
+                       ng-model="reportCheckedDto.report_workScore">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 control-label text-right">明日计划:</label>
+            <div class="col-sm-8">
+                <input type="text" placeholder="请输入考评分数" class="form-control" name="report_planScore"
+                       ng-model="reportCheckedDto.report_planScore">
+            </div>
+        </div>
+
+        <!--<div class="form-group row">-->
+        <!--<label class="col-sm-3 control-label text-right">最终分数：</label>-->
+        <!--<div class="col-sm-8" ng-model="reportChecked.totalScore">-->
+        <!--{{reportChecked.report_workScore+reportChecked.report_planScore}}-->
+        <!--&lt;!&ndash;<input type="text" class="form-control" name="totalScore" ng-model="reportCheckedDto.totalScore" ng-value="reportCheckedDto.report_workScore+reportCheckedDto.report_planScore">&ndash;&gt;-->
+        <!--</div>-->
+        <!--</div>-->
+
+        <div class="form-group row">
+            <label class="col-sm-3 control-label text-right">日报评语:</label>
+            <div class="col-sm-8">
+                <textarea class="form-control" name="report_remark" rows="2" cols="8"
+                          ng-model="reportCheckedDto.report_remark"/>
+            </div>
+        </div>
+        </form>
+    </div>
+</div>
+<div class="modal-footer ng-scope">
+    <button class="btn btn-default" ng-click="close()">关闭</button>
+</div>

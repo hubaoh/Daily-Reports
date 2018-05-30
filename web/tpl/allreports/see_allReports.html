@@ -1,0 +1,38 @@
+<div class="modal-header">
+    <h3 class="modal-title">{{report.report_time | date:"yyyy年MM月dd日"}}的日报</h3>
+</div>
+<div class="modal-body">
+    <form name="form" class="form-validation" novalidate>
+        <div class="form-group row">
+            <label class="col-sm-3 control-label text-right">今日工作记录:</label>
+            <div class="col-sm-8">
+                <textarea class="form-control" name="report_todayWork" rows="2" cols="8" ng-model="report.report_todayWork" ng-disabled="true" >你好呀</textarea>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 control-label text-right">遇到问题:</label>
+            <div class="col-sm-8">
+                <textarea class="form-control" name="report_todayProblem" rows="2" cols="8" ng-model="report.report_todayProblem" ng-disabled="true" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 control-label text-right">明日计划:</label>
+            <div class="col-sm-8">
+                <textarea class="form-control" name="report_tomorrowPlan" rows="2" cols="8" ng-model="report.report_tomorrowPlan" ng-disabled="true" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 control-label text-right">备注:</label>
+            <div class="col-sm-8">
+                <textarea class="form-control" name="report_tomorrowPlan" rows="2" cols="8" ng-model="report.report_tomorrowPlan" ng-disabled="true" />
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="modal-footer ng-scope">
+    <button class="btn btn-default" ng-click="close()">关闭</button>
+</div>

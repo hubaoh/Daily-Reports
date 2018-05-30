@@ -1,0 +1,39 @@
+<div class="modal-header">
+    <h3 class="modal-title">新建部门</h3>
+</div>
+<div class="modal-body">
+    <form name="form" class="form-validation" novalidate>
+        <div class="form-group row">
+            <label class="col-sm-3 control-label text-right">部门编号:</label>
+            <div class="col-sm-8">
+                <input class="form-control" type="text" placeholder="请输入部门编号" name="dept_number"
+                       ng-model="dept.dept_number" ng-length="4" required>
+                <p>
+                    <span style="color: red" ng-show="form.dept_number.$invalid">
+                        <span ng-show="form.dept_number.$error.length">*编号长度为4</span>
+                         <span ng-show="form.dept_number.$error.required">*部门编号不可为空</span>
+                    </span>
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 control-label text-right">部门名称:</label>
+            <div class="col-sm-8">
+                <input type="text" placeholder="请输入部门名称" class="form-control" name="dept_name" ng-model="dept.dept_name"
+                       required>
+                <p>
+                    <span style="color: red" ng-show="form.dept_name.$invalid">
+                        <span ng-show="form.dept_name.$error.required">*部门名称不可为空</span>
+                    </span>
+                </p>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+<div class="modal-footer ng-scope">
+    <button class="btn btn-default" ng-click="close()">取消</button>
+    <button class="btn btn-primary" type="submit" ng-click="create()" ng-disabled='form.$invalid'>新建</button>
+</div>

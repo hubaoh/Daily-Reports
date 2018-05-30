@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>工作日报管理系统</title>
+    <!--css -->
+    <link rel="stylesheet" href="js/libs/jquery/bootstrap/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/index.css">
+    <!--<link rel="stylesheet" href="js/libs/angular/ng-grid/ng-grid.bootstrap.css" type="text/css">-->
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/app.min.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="js/libs/assets/animate.css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="js/libs/assets/font-awesome/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="js/libs/assets/simple-line-icons/css/simple-line-icons.css" type="text/css" />
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/app.material.css">
+    <link rel="stylesheet" href="css/md.css">
+    <!--<link rel="stylesheet" href="css/demo.css">-->
+    <!--js -->
+    <link rel="icon" href="/favicon.ico" type="image/x-ico" />
+    <!--<link rel="bookmark" href="/favicon.ico"/>-->
+</head>
+<body ng-app="app" ng-controller="indexController">
+<!--<div id="head" style="background-color: rgb(32, 160, 255); height: 10%;">-->
+    <!--<div class="name" style="text-align: left; color: white; font-size: 30px; font-family: 隶书; margin-right: 3%; margin-top: 10px;">日报管理系统</div>-->
+    <!--<div class="info"-->
+         <!--style="text-align: right; color: white; font-size: 25px; font-family: 隶书; margin-right: 3%; margin-top: -30px;">-->
+        <!--欢迎&nbsp;{{currentUser.userName}}&nbsp;-->
+    <!--</div>-->
+<!--</div>-->
+<div id="left">
+    <div class="nav">
+        <div class="name" style="text-align: left; color: white; font-size: 32px; font-family: 隶书; margin-right: 7%; margin-top: 10px;"><img src="img/logo2.png" width="28px" height="28px" />日报管理系统</div>
+        <ul class="ul" id="ul">
+            <div ng-hide="currentUser.roleValue == 03">
+            <li class="nav-item">
+                <a href="javascript:;"><i class="nav-icon glyphicon glyphicon-user"></i><span>用户管理</span><i
+                        class="my-icon nav-more"></i></a>
+                <ul>
+                    <li><a ui-sref="user"><span>用户设置</span></a></li>
+                    <li><a ui-sref="dept"><span>部门设置</span></a></li>
+                    <!--<li><a ui-sref="javascript:;"><span>权限设置</span></a></li>-->
+                </ul>
+            </li>
+            </div>
+            <li class="nav-item">
+                <a href="javascript:;"><i class="nav-icon glyphicon glyphicon-file"></i><span>日报管理</span><i
+                        class="my-icon nav-more"></i></a>
+                <ul>
+                    <li><a ui-sref="myReports"><span>我的日报</span></a></li>
+                    <li><a ui-sref="allReports"><span>全员日报</span></a></li>
+                    <li><a ui-sref="myReportAppeal"><span>我的申诉</span></a></li>
+                    <!--<li ng-hide="currentUser.roleValue == 03"><a href="javascript:;"><span>日报模板</span></a></li>-->
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;"><i class="nav-icon glyphicon glyphicon-ok"></i><span>日报考评</span><i
+                        class="my-icon nav-more"></i></a>
+                <ul>
+                    <li><a ui-sref="myReportChecked"><span>我的考评</span></a></li>
+                    <li><a ui-sref="sort"><span>考评排名</span></a></li>
+                    <li><a ui-sref="summary"><span>考评统计</span></a></li>
+                    <li ng-hide="currentUser.roleValue == 03"><a ui-sref="reportChecking"><span>需要考评</span><b class="badge bg-danger" ng-hide="count == 0">{{count}}</b></a></li>
+                    <li ng-show="currentUser.roleValue == 01"><a ui-sref="reportAppealing"><span>日报申诉</span><b class="badge bg-danger" ng-hide="number == 0">{{number}}</b></a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a href="javascript:;"><i class="nav-icon glyphicon glyphicon-cog"></i><span>系统设置</span><i
+                        class="my-icon nav-more"></i></a>
+                <ul>
+                    <li><a ui-sref="file"><span>文档管理</span></a></li>
+                    <li><a ui-sref="personal"><span>个人设置</span></a></li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+</div>
+<div id="right" data-ui-view></div>
+
+<!--jquery -->
+<script type="text/javascript" src="js/libs/jquery/jquery-1.11.0.js"></script>
+
+<!--bootstrap -->
+<script type="text/javascript" src="js/libs/jquery/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="js/controllers/block/nav.js"></script>
+<!--angular -->
+<script type="text/javascript" src="js/libs/angular/angular/angular.js"></script>
+<script src="js/libs/angular/angular-animate/angular-animate.js"></script>
+<script src="js/libs/angular/angular-aria/angular-aria.js"></script>
+<script src="js/libs/angular/angular-cookies/angular-cookies.js"></script>
+<script src="js/libs/angular/angular-messages/angular-messages.js"></script>
+<script src="js/libs/angular/angular-resource/angular-resource.js"></script>
+<script src="js/libs/angular/angular-sanitize/angular-sanitize.js"></script>
+<script src="js/libs/angular/angular-touch/angular-touch.js"></script>
+<script type="text/javascript" src="js/libs/angular/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="js/libs/angular/ngstorage/ngStorage.js"></script>
+<script src="js/libs/angular/angular-ui-utils/ui-utils.js"></script>
+<script src="js/libs/angular/angular-file-upload/angular-file-upload.js"></script>
+<!--bootstrap tpls -->
+<script src="js/libs/angular/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+<script src="js/libs/angular/oclazyload/dist/ocLazyLoad.min.js"></script>
+
+ <!--translate-->
+<script src="js/libs/angular/angular-translate/angular-translate.js"></script>
+<script src="js/libs/angular/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+<script src="js/libs/angular/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+<script src="js/libs/angular/angular-translate-storage-local/angular-translate-storage-local.js"></script>
+
+<!-- excel -->
+<script src="js/libs/excel/alasql.min.js"></script>
+<script src="js/libs/excel/xls.core.min.js"></script>
+<!-- echarts -->
+<script src="js/libs/angular/angular-echart/echarts.js"></script>
+<!-- App -->
+<script src="js/app.js"></script>
+<script src="js/config.js"></script>
+<script src="js/config.lazyload.js"></script>
+<script src="js/config.router.js"></script>
+<script src="js/services/ui-load.js"></script>
+<script src="js/filters/fromNow.js"></script>
+<script src="js/directives/setnganimate.js"></script>
+<script src="js/directives/ui-butterbar.js"></script>
+<script src="js/directives/ui-focus.js"></script>
+<script src="js/directives/ui-fullscreen.js"></script>
+<script src="js/directives/ui-jq.js"></script>
+<script src="js/directives/ui-module.js"></script>
+<script src="js/directives/ui-nav.js"></script>
+<script src="js/directives/ui-scroll.js"></script>
+<script src="js/directives/ui-shift.js"></script>
+<script src="js/directives/ui-toggleclass.js"></script>
+<script>
+    angular.module('app').controller('indexController', ['$scope','$http',function($scope, $http){
+
+        $http.get("users/current").success(function (data) {
+            $scope.currentUser = data.data;
+        });
+
+        setInterval(function () {
+            $http.get("report_checkeds/count").success(function (data) {
+                $scope.count = data.data;
+//                console.log($scope.count);
+            });
+
+            $http.get("report_appeals/number").success(function (data) {
+                $scope.number = data.data;
+//                console.log($scope.count);
+            });
+        },2000);
+
+
+    }]);
+
+</script>
+</body>
+</html>
